@@ -123,8 +123,8 @@ Each project demonstrates a specific writing approach — from hardware manuals 
 | Project | Description | Type |
 |:--|:--|:--|
 | [Inversor ASB 3000w](./docs/Inversor.md) | Technical document describing the structure, operation, and usage of an off-grid power inverter. | Hardware Documentation |
-| [ModelForge Studio](./docs/Model-Forge-Studio.md) | Technical and user documentation for a 3D modeling software. Focus on structure, flow, and clarity. | Software Documentation |
-| [Solar Energy System Installation Guide](./docs/Guia-de-instalacao-de-Painel-Solar.md) | Installation manual for an off-grid solar energy system, written for general users. | User Guide |
+| [Model Forge Studio](./docs/Model-Forge-Studio.md) | Technical and user documentation for a 3D modeling software. Focus on structure, flow, and clarity. | Software Documentation |
+| [Guia de instalação de Painel Solar](./docs/Guia-de-instalacao-de-Painel-Solar.md) | Installation manual for an off-grid solar energy system, written for general users. | User Guide |
 | [API Documentation Sample](./docs/Guia-de-Documentacao-API.md) | Example of an API documentation structure with endpoints, authentication, and response examples. | API Documentation |
 
 ---
