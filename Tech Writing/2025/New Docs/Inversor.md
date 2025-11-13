@@ -29,8 +29,8 @@ Por sua alta eficência na produção de energia igual a da rede pública, o Inv
 * Bomba d'água
 * Eletrodomésticos (ventilador, liquidificador, frigobar)
 
-### 5 - Atenção
-* O Inversor é compatível apenas em sitemas de baterias em 12V ou 24V.* 
-* Utilize cabos de pelo menos 4mm para garantir uma melhor geração de energia.
-* Mantenha o Inversor em local ventilado e seco.
-* Nunca ligue sei Inversor diretamente na rede elétrica pública.
+### **5 - Atenção**
+* **O Inversor é compatível apenas em sitemas de baterias em 12V ou 24V.** 
+* **Utilize cabos de pelo menos 4mm para garantir uma melhor geração de energia.**
+* **Mantenha o Inversor em local ventilado e seco.**
+* **Nunca ligue sei Inversor diretamente na rede elétrica pública.**
