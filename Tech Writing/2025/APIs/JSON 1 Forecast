@@ -38,3 +38,24 @@
 }}
     ]
 }
+
+[
+  {
+    "id": "dev_001",
+    "name": "Luz da Sala",
+    "type": "Smart Light",
+    "status": "on"
+  },
+  {
+    "id": "dev_002",
+    "name": "Termostato",
+    "type": "Climate Control",
+    "status": "72°F"
+  },
+  {
+    "id": "dev_003",
+    "name": "Fechadura da Porta",
+    "type": "Smart Door Lock",
+    "status": "locked"
+  }
+]
