@@ -1,4 +1,4 @@
-# Model Forge Studio API - 1 - Documentation
+# Model Forge Studio API Documentation
 API Version: 1.0  
 Base URL: `https://api.modelforge.studio/v1`
 
