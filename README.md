@@ -120,7 +120,7 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 | [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Technical and user-facing documentation for a 3D modeling software.                                                                            | Software Documentation |
 | [Solar Energy System Installation Guide](./docs/Guia-de-Instalacao-de-Painel-Solar.md)             | User-friendly installation manual for an off-grid solar system.                                                                                | User Guide             |
 | [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Beginner-friendly explanation of essential cybersecurity risks and protections.                                                                | Educational Guide      |
-| **[Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document)** | Full REST API documentation for the ModelForge Studio ecosystem, including endpoints, errors, auth, models, mesh, materials, and export flows. | **API Documentation**  |
+| **[Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document.md)** | Full REST API documentation for the ModelForge Studio ecosystem, including endpoints, errors, auth, models, mesh, materials, and export flows. | **API Documentation**  |
 
 
 ---
@@ -131,7 +131,7 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 | [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Documentação técnica e de uso para um software de modelagem 3D.                                                          | Documentação de Software |
 | [Guia de Instalação de Painel Solar](./docs/Guia-de-Instalacao-de-Painel-Solar.md)                 | Manual acessível para instalação de sistema solar off-grid.                                                              | Guia de Usuário          |
 | [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Documento educacional explicando riscos e proteções em cibersegurança.                                                   | Guia Educacional         |
-| **[Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document)** | Documentação REST completa da API do ModelForge Studio, incluindo autenticação, endpoints, erros e fluxos de exportação. | **Documentação de API**  |
+| **[Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document.md)** | Documentação REST completa da API do ModelForge Studio, incluindo autenticação, endpoints, erros e fluxos de exportação. | **Documentação de API**  |
 
 ---
 
