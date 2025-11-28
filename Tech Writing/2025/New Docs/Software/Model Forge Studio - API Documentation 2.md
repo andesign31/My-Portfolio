@@ -1,233 +1,192 @@
-# Model Forge Studio – API Documentation  
-Version: 2  
-Status: Draft  
-
-## Overview
-The Model Forge Studio API allows external applications, plugins, and tools to interact with the 3D modeling environment.  
-This includes functionalities for **model creation**, **rendering**, **asset management**, and **export operations**.
-
-The API uses **REST principles** and communicates via **JSON**.  
-All endpoints are prefixed with:
-
-`https://api.modelforgestudio.com/v1`
+# ModelForge Studio – Core API Documentation
+Version: 1.0.0  
+Status: Prototype  
+Last Update: 2025-11-28  
 
 ---
 
-# 1. Authentication
+## 1. Overview
+The **ModelForge Studio Core API** provides programmatic access to core features of the 3D modeling environment.  
+This allows external applications and plugins to create, load, modify, and export 3D models without using the graphical interface.
 
-The API uses **API Keys** for authentication.  
-Include your key in all requests using the header:
-x-api-key: YOUR_API_KEY
-
-
-## Error: Missing or invalid key
-401 Unauthorized
+This API is REST-based and communicates using **JSON**.  
+All endpoints start with:
 
 
----
-
-# 2. Endpoints
+`https://api.modelforge.com/v1`
 
 ---
 
-# 2.1. Project Management
+## 2. Authentication
 
-## **Create Project**
-`POST /projects`
+### 2.1 API Key  
+Every request must include an API Key in the header:
+Authorization: Bearer your_api_key_here
 
-Create a new 3D project inside Model Forge Studio.
+Example:
 
-### Request Body
-```json
-{
-  "name": "My New Project",
-  "description": "First API test project"
-}
-```
-### Response (201)
+GET /v1/models
+Authorization: Bearer 81fa9001-a29d-4503-b210
+
+If authentication fails, the server returns:
 
 ```json
 {
-  "projectId": "p_44931",
-  "name": "My New Project",
-  "createdAt": "2025-02-19T14:22:00Z",
-  "status": "created"
+  "error": "Unauthorized",
+  "message": "Missing or invalid API key"
 }
 ```
 ---
-### List Projects
-`GET /projects`
+| Category  | Purpose                                   |
+| --------- | ----------------------------------------- |
+| Models    | Create, load, list, delete models         |
+| Mesh      | Modify geometry of existing models        |
+| Materials | Apply or update materials                 |
+| Export    | Export models into different formats      |
+| System    | Check health, version, and service status |
+---
 
-### Response (200)
+## 4. Models API
+### 4.1 List Models
+**GET/models**
+Returns all models stored in the user workspace.
+**Response**
+```json 
+{
+  "models": [
+    {
+      "id": "mdl_101",
+      "name": "Spaceship",
+      "created_at": "2025-01-05",
+      "polygons": 12400
+    }
+  ]
+}
+```
+---
+### 4.2 Create a new model
+**POST/models**
+Creates an empty model workspace.
+
+**Requestbody**
+```json
+{
+  "name": "NewModel"
+}
+```
+**Response**
+```json
+{
+  "id": "mdl_202",
+  "name": "NewModel",
+  "message": "Model successfully created"
+}
+```
+---
+### 4.3 Load a specific model
+**GET/models/{model_id}**
+Examples
+
+```bash
+GET /models/mdl_202
+```
+**Response**
+```json
+{
+  "id": "mdl_202",
+  "name": "NewModel",
+  "polygons": 0,
+  "materials": []
+}
+```
+---
+### 4.4 Delete a model
+**DELETE/model/{model_id}**
+**Response**
  ```json
-[
-  {
-    "projectId": "p_44931",
-    "name": "My New Project",
-    "lastModified": "2025-02-19T14:22:00Z"
-  },
-  {
-    "projectId": "p_44921",
-    "name": "Demo Render",
-    "lastModified": "2025-02-14T09:10:32Z"
-  }
-]
+ {
+  "status": "deleted",
+  "id": "mdl_202"
+}
+ ```
+ ---
+ ## Mesh Editing API
+ ### 5.1 Add geometry
+ **POST/models/{id}/mesh/add**
+
+ Adds primitive objects (cube, sphere, plane).
+
+ ### Body
+ ```json
+ {
+  "primitive": "cube",
+  "size": 1
+}
 ```
----
-
-### Delete Project
-`DELETE/projects/{projectId}`
-### Response
-
+**Response**
 ```json
 {
-    "deleted": true
+  "model_id": "mdl_101",
+  "geometry_added": "cube",
+  "polygons": 720
 }
 ```
 ---
-## 2.2 Model Operations
-### Upload 3D Model
-`POST /models/upload`
-
-Used to Import 3D files into a project.
-
-### Request (multipart/form-data)
-```makefile
-file: model.fbx
-projectId: p_44931
-```
-### Response
-
+### 5.2 Extrude faces
+**POST/models/{id}/mesh/extrude**
 ```json
 {
-  "modelId": "m_32891",
-  "projectId": "p_44931",
-  "filename": "model.fbx",
-  "status": "processing"
+  "face_id": 12,
+  "distance": 0.5
+}
+```
+### 5.3 Apply subdivision
+**POST /models/{id}/mesh/subdivide**
+```json
+{
+  "iterations": 2
+}
+``` 
+---
+## 6. Materials API
+### 6.1 List materials
+**GET/materials**
+## Response
+```json
+{
+  "materials": [
+    { "id": "mat_01", "name": "Metal", "type": "PBR" }
+  ]
 }
 ```
 ---
-### List Models
-`GET /projects/{projectId}/models`
-
-### Response
-```json
-[
-  {
-    "modelId": "m_32891",
-    "filename": "model.fbx",
-    "status": "ready"
-  }
-]
-```
----
-
-## 2.3 Rendering Engine
-### Start Render
-`POST/render/start`
-### Request Body
+### 6.2 Apply material
+**POST /models/{id}/materials/apply**
 ```json
 {
-  "projectId": "p_44931",
-  "resolution": "1920x1080",
-  "quality": "high"
-}
-```
-### Response
-```json
-{
-    "renderId": "r_12044",
-    "status": "queued"
+  "material_id": "mat_01"
 }
 ```
 ---
-### Get Render Status
-`GET /render/{renderId}`
-
-### Response
+### 6.3 Create custom material
+**POST/materials**
 ```json
 {
-  "renderId": "r_12044",
-  "status": "complete",
-  "outputUrl": "https://cdn.mfstudio.com/renders/r_12044.png"
+  "name": "CustomBlue",
+  "color": "#2045FF",
+  "roughness": 0.4
 }
 ```
 ---
-## 2.4 Material Library
-### List Materials
-`GET/materials`
-### Response
-```json
-[
-  {
-    "materialId": "mat_204",
-    "name": "Brushed Metal",
-    "category": "metal"
-  },
-  {
-    "materialId": "mat_312",
-    "name": "Soft Plastic",
-    "category": "plastic"
-  }
-]
-```
----
-## Apply Material to Model
-`POST/materials/apply`
-
-### Request Body
+## 7. Export
+### 7.1 Export model
+**POST /models/{id}/export**
+### Body
 ```json
 {
-    "modelId" : "m_32891",
-    "materialId" : "mat_204"
+  "format": "obj",
+  "apply_modifiers": true
 }
 ```
-### Response
-```json
-{
-  "updated": true,
-  "modelId": "m_32891",
-  "materialId": "mat_204"
-}
-```
----
-## 2.5 Exporting Models
-### Export Model
-`POST/export`
 
-### Request Body
-```json
-{
-  "modelId": "m_32891",
-  "format": "GLTF"
-}
-```
-### Response
-```json
-{
-  "exportId": "ex_90022",
-  "downloadUrl": "https://cdn.mfstudio.com/export/ex_90022.gltf"
-}
-```
----
 
-## 3. Error Codes
-| Code | Meaning                               |
-| ---- | ------------------------------------- |
-| 400  | Invalid request format                |
-| 401  | Missing or invalid API key            |
-| 404  | Resource not found                    |
-| 409  | Conflict (ex: render already running) |
-| 500  | Internal server error                 |
-
----
-
-### 4. Rate Limits
-Each API Key is allowed
-*  **500 requests/minute**
-*  **15,000 requests/day**
-
-Exceding this returns:
-```json
-429 Too Many Requests
-```
