@@ -120,7 +120,7 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 | [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Technical and user-facing documentation for a 3D modeling software.                                                                            | Software Documentation |
 | [Solar Energy System Installation Guide](./docs/Guia-de-Instalacao-de-Painel-Solar.md)             | User-friendly installation manual for an off-grid solar system.                                                                                | User Guide             |
 | [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Beginner-friendly explanation of essential cybersecurity risks and protections.                                                                | Educational Guide      |
-| **[Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document.md)** | Full REST API documentation for the ModelForge Studio ecosystem, including endpoints, errors, auth, models, mesh, materials, and export flows. | **API Documentation**  |
+| [Model Forge Studio_API_Document](./docs/Model-Forge-Studio_API_Document.md) | Full REST API documentation for the ModelForge Studio ecosystem, including endpoints, errors, auth, models, mesh, materials, and export flows. | **API Documentation**  |
 
 
 ---
