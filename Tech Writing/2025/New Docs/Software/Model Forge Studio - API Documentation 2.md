@@ -188,5 +188,86 @@ GET /models/mdl_202
   "apply_modifiers": true
 }
 ```
+### Response
+```json
+{
+  "status": "exported",
+  "download_url": "https://modelforge.com/download/mdl_202.obj"
+}
+```
+---
+## 8. System API
+### 8.1 Health Check
+**GET/system/health**
 
+### Response
+```json
+{
+  "status": "online",
+  "uptime": "12h 32m"
+}
+```
+---
+### 8.2 Version
+**GET/system/version**
+```json
+{
+  "version": "1.0.0",
+  "api_status": "stable"
+}
+```
+---
+## Error Reference
+| Error | Meaning      | Explanation                            |
+| ----- | ------------ | -------------------------------------- |
+| 400   | Bad Request  | Your JSON body is invalid              |
+| 401   | Unauthorized | Missing or wrong API key               |
+| 404   | Not Found    | Model or resource does not exist       |
+| 500   | Server Error | Internal issue with ModelForge service |
 
+Example:
+```json
+{
+  "error": "Bad Request",
+  "details": "Field 'primitive' is required"
+}
+```
+---
+## Rate Limits
+#### The API has the following rate limits:
+| Plan       | Requests/min |
+| ---------- | ------------ |
+| Free       | 60           |
+| Pro        | 400          |
+| Enterprise | Unlimited    |
+
+If the limit is exceeded:
+```json
+{
+  "error": "Too Many Requests",
+  "retry_after": 30
+}
+```
+---
+## 11. Webhooks (optional)
+ModelForge can notify your application when exports finish.
+**Example webhook payload**
+```json
+{
+  "event": "export.completed",
+  "model_id": "mdl_101",
+  "format": "obj",
+  "download_url": "https://download"
+}
+```
+---
+## 12. Changelog
+
+**v1.0.0-Initial API release**
+• Added Models API
+• Added Mesh API
+• Added Materials API
+• Added Export API
+• Added System Health API
+
+---
