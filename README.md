@@ -114,31 +114,25 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 🌐 **LinkedIn:** [www.linkedin.com/in/anderson-barbosa-98306857](www.linkedin.com/in/anderson-barbosa-98306857)  
 💻 **GitHub:** [github.com/andesign31](https://github.com/andesign31)  
 
-# 📂 Projects / Projetos  
+| Project                                                                                            | Description                                                                                                                                    | Type                   |
+| :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
+| [Inversor ASB 3000w](./docs/Inversor-ASB-3000w.md)                                                 | Technical document describing the structure and operation of an off-grid power inverter.                                                       | Hardware Documentation |
+| [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Technical and user-facing documentation for a 3D modeling software.                                                                            | Software Documentation |
+| [Solar Energy System Installation Guide](./docs/Guia-de-Instalacao-de-Painel-Solar.md)             | User-friendly installation manual for an off-grid solar system.                                                                                | User Guide             |
+| [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Beginner-friendly explanation of essential cybersecurity risks and protections.                                                                | Educational Guide      |
+| [Documentação da API - Model Forge Studio](./docs/Model-Forge-Studio_API_Document.md) | Full REST API documentation for the ModelForge Studio ecosystem, including endpoints, errors, auth, models, mesh, materials, and export flows. | **API Documentation**  |
 
-## 🇺🇸 English  
-Below are some examples of documentation I’ve created or structured.  
-Each project demonstrates a specific writing approach — from hardware manuals to software and UI documentation.
-
-| Project | Description | Type |
-|:--|:--|:--|
-| [Inversor ASB 3000w](./docs/Inversor.md) | Technical document describing the structure, operation, and usage of an off-grid power inverter. | Hardware Documentation |
-| [Model Forge Studio](./docs/Model-Forge-Studio.md) | Technical and user documentation for a 3D modeling software. Focus on structure, flow, and clarity. | Software Documentation |
-| [Guia de instalação de Painel Solar](./docs/Guia-de-instalacao-de-Painel-Solar.md) | Installation manual for an off-grid solar energy system, written for general users. | User Guide |
-| [Cyber Security](./docs/Cyber-Security.md) | Structured documentation covering security policies, risk analysis, contingency planning, and incident response. | Cybersecurity Documentation |
 
 ---
 
-## 🇧🇷 Português  
-Abaixo estão alguns exemplos de documentações que produzi ou estruturei.  
-Cada projeto representa uma abordagem diferente de escrita — desde manuais de hardware até documentação de software e interface.
+| Projeto                                                                                            | Descrição                                                                                                                | Tipo                     |
+| :------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- | :----------------------- |
+| [Inversor ASB 3000w](./docs/Inversor-ASB-3000w.md)                                                 | Documento técnico sobre a estrutura e funcionamento de um inversor off-grid.                                             | Documentação de Hardware |
+| [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Documentação técnica e de uso para um software de modelagem 3D.                                                          | Documentação de Software |
+| [Guia de Instalação de Painel Solar](./docs/Guia-de-Instalacao-de-Painel-Solar.md)                 | Manual acessível para instalação de sistema solar off-grid.                                                              | Guia de Usuário          |
+| [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Documento educacional explicando riscos e proteções em cibersegurança.                                                   | Guia Educacional         |
+| [Documentação da API - Model Forge Studio](./docs/Model-Forge-Studio_API_Document.md)| Documentação REST completa da API do ModelForge Studio, incluindo autenticação, endpoints, erros e fluxos de exportação. | **Documentação de API**  |
 
-| Projeto | Descrição | Tipo |
-|:--|:--|:--|
-| [Inversor ASB 3000w](./docs/Inversor.md) | Documento técnico descrevendo a estrutura, funcionamento e uso de um inversor de energia off-grid. | Documentação de Hardware |
-| [ModelForge Studio](./docs/Model-Forge-Studio.md) | Documentação técnica e de uso para um software de modelagem 3D. Foco em estrutura, fluxo e clareza. | Documentação de Software |
-| [Guia de Instalação de Painel Solar](./docs/Guia-de-instalacao-de-Painel-Solar.md) | Manual de instalação para um sistema de energia solar off-grid, escrito para usuários em geral. | Guia de Usuário |
-| [Cyber Security](./docs/Cyber-Security.md) |  Documentação técnica estruturada abordando políticas de segurança, análise de risco, planos de contingência e resposta a incidentes. | Documentação de Segurança |
 ---
 
 > 🧠 *“Clear writing makes technology accessible.”*  
