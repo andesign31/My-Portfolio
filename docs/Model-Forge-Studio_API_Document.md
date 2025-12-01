@@ -1,4 +1,4 @@
-# ModelForge Studio – Core API Documentation
+# ModelForge-Studio – Core API Documentation
 Version: 1.0.0  
 Status: Prototype  
 Last Update: 2025-11-28  
@@ -271,3 +271,4 @@ ModelForge can notify your application when exports finish.
 • Added System Health API
 
 ---
+
