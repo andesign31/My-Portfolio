@@ -1,13 +1,303 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
-  title: API1
+  title: Model Forge Studio API
+  description: >
+    API for extending, automating, and integrating with the Model Forge Studio
+    3D modeling environment.  
+    Provides access to project management, model generation, texture handling,
+    dataset imports, and rendering workflows.
   version: 1.0.0
+  contact:
+    name: Model Forge Support Team
+    email: support@modelforge.io
+
 servers:
-  - url: https://api.exemplo.com/v1
+  - url: https://api.modelforge.io/v1
+    description: Production server
+  - url: https://sandbox.modelforge.io/v1
+    description: Sandbox for testing
+
+tags:
+  - name: Projects
+    description: Manage projects inside Model Forge Studio.
+  - name: Models
+    description: Operations related to 3D model creation and generation.
+  - name: Textures
+    description: Upload, edit, and retrieve texture assets.
+  - name: Rendering
+    description: Trigger and manage rendering jobs.
+  - name: Datasets
+    description: Import datasets for AI-assisted modeling.
+
 paths:
-  /produtos:
+
+  /projects:
     get:
-      summary: Lista todos os produtos
+      tags: [Projects]
+      summary: List all projects
+      description: Retrieve all user-accessible projects.
       responses:
-        '200':
-          description: Lista retornada com sucesso
+        "200":
+          description: A list of projects.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+
+    post:
+      tags: [Projects]
+      summary: Create a new project
+      description: Creates a new project workspace.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProjectCreateRequest"
+      responses:
+        "201":
+          description: Project successfully created.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+
+  /projects/{projectId}:
+    get:
+      tags: [Projects]
+      summary: Get project by ID
+      parameters:
+        - $ref: "#/components/parameters/ProjectId"
+      responses:
+        "200":
+          description: Project details.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+
+    delete:
+      tags: [Projects]
+      summary: Delete project
+      parameters:
+        - $ref: "#/components/parameters/ProjectId"
+      responses:
+        "204":
+          description: Project deleted successfully.
+
+  /models:
+    post:
+      tags: [Models]
+      summary: Generate a 3D model
+      description: AI-assisted 3D model generation based on text prompts.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ModelGenerateRequest"
+      responses:
+        "201":
+          description: Model successfully generated.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Model"
+
+  /models/{modelId}:
+    get:
+      tags: [Models]
+      summary: Get model metadata
+      parameters:
+        - $ref: "#/components/parameters/ModelId"
+      responses:
+        "200":
+          description: Model details.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Model"
+
+  /textures/upload:
+    post:
+      tags: [Textures]
+      summary: Upload a texture asset
+      description: Uploads an image file to be used as texture.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: "#/components/schemas/TextureUploadRequest"
+      responses:
+        "201":
+          description: Texture successfully uploaded.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Texture"
+
+  /render:
+    post:
+      tags: [Rendering]
+      summary: Start a render job
+      description: Create a rendering job for a 3D model.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RenderJobRequest"
+      responses:
+        "202":
+          description: Render job started.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RenderJob"
+
+  /datasets/import:
+    post:
+      tags: [Datasets]
+      summary: Import dataset
+      description: Uploads a dataset to be used for AI model training or reference.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: "#/components/schemas/DatasetUploadRequest"
+      responses:
+        "201":
+          description: Dataset imported successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dataset"
+
+components:
+
+  parameters:
+    ProjectId:
+      name: projectId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Unique ID of the project.
+
+    ModelId:
+      name: modelId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Unique ID of the 3D model.
+
+  schemas:
+
+    Project:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        description:
+          type: string
+
+    ProjectCreateRequest:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+
+    ModelGenerateRequest:
+      type: object
+      required: [prompt]
+      properties:
+        prompt:
+          type: string
+        quality:
+          type: string
+          enum: [low, medium, high]
+
+    Model:
+      type: object
+      properties:
+        id:
+          type: string
+        prompt:
+          type: string
+        url:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    TextureUploadRequest:
+      type: object
+      required: [file]
+      properties:
+        file:
+          type: string
+          format: binary
+
+    Texture:
+      type: object
+      properties:
+        id:
+          type: string
+        fileUrl:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    RenderJobRequest:
+      type: object
+      required: [modelId]
+      properties:
+        modelId:
+          type: string
+        resolution:
+          type: string
+          enum: ["720p", "1080p", "4k"]
+
+    RenderJob:
+      type: object
+      properties:
+        id:
+          type: string
+        modelId:
+          type: string
+        status:
+          type: string
+          enum: [queued, rendering, completed]
+
+    DatasetUploadRequest:
+      type: object
+      required: [file]
+      properties:
+        file:
+          type: string
+          format: binary
+
+    Dataset:
+      type: object
+      properties:
+        id:
+          type: string
+        fileUrl:
+          type: string
+        importedAt:
+          type: string
+          format: date-time
