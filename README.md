@@ -131,7 +131,7 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 | [ModelForge Studio](./docs/ModelForge-Studio.md)                                                   | Documentação técnica e de uso para um software de modelagem 3D.                                                          | Documentação de Software |
 | [Guia de Instalação de Painel Solar](./docs/Guia-de-Instalacao-de-Painel-Solar.md)                 | Manual acessível para instalação de sistema solar off-grid.                                                              | Guia de Usuário          |
 | [Cyber Security Overview](./docs/Cyber-Security.md)                                                | Documento educacional explicando riscos e proteções em cibersegurança.                                                   | Guia Educacional         |
-| [Documentação da API - Model Forge Studio](./docs/Model-Forge-Studio_API_Document.md)| Documentação REST completa da API do ModelForge Studio, incluindo autenticação, endpoints, erros e fluxos de exportação. | **Documentação de API**  |
+| [Documentação da API - Model Forge Studio](./docs/Inversor-ASB-3000w.md)| Documentação REST completa da API do ModelForge Studio, incluindo autenticação, endpoints, erros e fluxos de exportação. | **Documentação de API**  |
 
 ---
 
