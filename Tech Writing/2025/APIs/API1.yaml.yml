@@ -1,0 +1,13 @@
+openapi: 3.0.3
+info:
+  title: API1
+  version: 1.0.0
+servers:
+  - url: https://api.exemplo.com/v1
+paths:
+  /produtos:
+    get:
+      summary: Lista todos os produtos
+      responses:
+        '200':
+          description: Lista retornada com sucesso
