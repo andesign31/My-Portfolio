@@ -1,6 +1,6 @@
 # Guia de instalação de Painel Solar
 ## 1. Introdução
-Este documento é um guia do passo a passo para a instalação de painel solar em um sitema Off-Grid.
+Este documento é um guia do passo a passo para a instalação de painel solar em um sistema Off-Grid.
 
 ## 2. Materiais Utilizados
 * 1 Painel Solar de 280 watts de potência
@@ -39,10 +39,11 @@ Este documento é um guia do passo a passo para a instalação de painel solar e
 ## 6 . Testes e Verificações
 
 *  Verifique novamente se todos os cabos estão bem presos ao controlador e a bateria.
-* Se o modelo do seu controlador de carga não tiver um painel digital indicando os valores de entrada e saída de carga, utilize um multímetro para verificar no controlador a tensão do sitema, a carga da bateria e a corrente de entrada do painel.
+* Se o modelo do seu controlador de carga não tiver um painel digital indicando os valores de entrada e saída de carga, utilize um multímetro para verificar no controlador a tensão do sistema, a carga da bateria e a corrente de entrada do painel.
  
  ## 6. Uso e Manutenção
  * Faça uma limpeza nos painéis a cada dois meses.
  * Garanta que os parafusos estão firmes.
  * Faça uma verificação periódica junto ao controlador de carga para se certificar que o sistema está em pleno funcionamento.
+
 
