@@ -109,11 +109,11 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 ---
 
 ## 🤝 Contact / Contato  
-
 📬 **Email:** [andesign31@gmail.com](mailto:andesign31@gmail.com)  
 🌐 **LinkedIn:** [www.linkedin.com/in/anderson-barbosa-98306857](www.linkedin.com/in/anderson-barbosa-98306857)  
 💻 **GitHub:** [github.com/andesign31](https://github.com/andesign31)  
 ---
+
 
 # 📝 Featured Technical Writing Projects
 
@@ -127,6 +127,7 @@ Refactored the official Bidder CLI documentation for the mev-commit network to i
 * **Result:** [Open Pull Request #290](https://github.com/primev/mev-commit-docs/pull/290)
 
 ---
+## Personal Projects
 
 | Project                                                                                            | Description                                                                                                                                    | Type                   |
 | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
