@@ -117,7 +117,7 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 
 ## 📝 Featured Technical Writing Projects
 
-### [Documentation Refactoring: mev-commit (Web3)](./mev-commit-case.md)
+### [Documentation Refactoring: mev-commit (Web3)](./docs/mev-commit-case.md)
 **Role:** Technical Writer | **Tools:** MDX, Git, GitHub
 
 Refactored the official Bidder CLI documentation for the mev-commit network to improve developer onboarding and tool adoption.
