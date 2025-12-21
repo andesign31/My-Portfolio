@@ -108,16 +108,16 @@ Tenho facilidade em lidar com softwares, APIs e sistemas voltados ao usuário, s
 
 ---
 
-# 🤝 Contact / Contato  
+## 🤝 Contact / Contato  
 
 📬 **Email:** [andesign31@gmail.com](mailto:andesign31@gmail.com)  
 🌐 **LinkedIn:** [www.linkedin.com/in/anderson-barbosa-98306857](www.linkedin.com/in/anderson-barbosa-98306857)  
 💻 **GitHub:** [github.com/andesign31](https://github.com/andesign31)  
 ---
 
-## 📝 Featured Technical Writing Projects
+# 📝 Featured Technical Writing Projects
 
-### [Documentation Refactoring: mev-commit (Web3)](./docs/mev-commit-case.md)
+## [Documentation Refactoring: mev-commit (Web3)](./docs/mev-commit-case.md)
 **Role:** Technical Writer | **Tools:** MDX, Git, GitHub
 
 Refactored the official Bidder CLI documentation for the mev-commit network to improve developer onboarding and tool adoption.
