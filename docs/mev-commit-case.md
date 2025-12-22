@@ -29,7 +29,7 @@
 
 ## 🔗 Evidence of Work
 - **Original Pull Request:** [PR #290: docs: improve structure and readability of Bidder CLI and Best Practices](https://github.com/primev/mev-commit-docs/pull/290)
-- **Final Document:** [Bidder CLI MDX](https://github.com/andesign31/mev-commit-docs/blob/main/v1.2.x/get-started/bidders/bidder-cli.mdx) and [BEST PRACTICES MDX](https://github.com/primev/mev-commit-docs/blob/main/v1.2.x%2Fget-started%2Fbidders%2Fbest-practices.mdx) 
+- **Final Document:** [Bidder CLI MDX](https://github.com/andesign31/mev-commit-docs/blob/main/v1.2.x/get-started/bidders/bidder-cli.mdx) and [BEST PRACTICES MDX](v1.2.x/get-started/bidders/best-practices.mdx) 
 
 ---
 *This project demonstrates my ability to translate complex blockchain infrastructure concepts into accessible, professional documentation.*
